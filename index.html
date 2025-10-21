@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Homepage</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- Header -->
+    <header class="topbar">
+      <div class="hello">Hello, <span id="userName">[Name]</span></div>
+      <div class="icons">
+        <button type="button" class="icon-btn" aria-label="Settings" id="settingsBtn">
+          <img id="settingsIcon" src="images/settings.png" alt="" />
+        </button>
+        <button type="button" class="icon-btn" aria-label="Notifications" id="notifBtn">
+          <img id="notifIcon" src="images/notifications.png" alt="" />
+        </button>
+      </div>
+    </header>
+
+    <!-- AQI Card -->
+    <section class="card aqi-card aqi-good" id="aqiCard">
+      <div class="aqi-header">Today's AQIhelp</div>
+      <img id="weatherIcon" src="" alt="Weather icon" class="weather-icon" />
+      <div class="aqi-value" id="aqiNum">--</div>
+      <div class="aqi-quality" id="aqiQuality">QUALITY: --</div>
+      <div class="location">Hacienda Heights, CA</div>
+
+      <div class="aqi-actions">
+        <button class="pill-btn" type="button">AQI & Your Asthma</button>
+        <button class="round-btn" type="button" aria-label="Help">?</button>
+      </div>
+    </section>
+
+    <!-- Inhaler Card -->
+    <section class="card simple-card">
+      <div class="title-row">
+        <img class="leading-icon" id="inhalerIcon" src="images/inhaler.png" alt="Inhaler icon" />
+        <h2>Your Inhaler</h2>
+      </div>
+      <p class="muted">Current in Use: Flixotide (Fluticasone)</p>
+      <p class="warning">Expiration: March 09–16</p>
+      <button class="primary-btn" type="button">View/Edit Details</button>
+    </section>
+
+    <!-- Log Entry Card -->
+    <section class="card simple-card">
+      <div class="title-row">
+        <img class="leading-icon" id="logIcon" src="images/entry.png" alt="Log icon" />
+        <h2>Log an Entry</h2>
+      </div>
+      <p class="muted">Last entry: MM/DD/YY @ HH:MM</p>
+      <button class="primary-btn" type="button">View/Edit Details</button>
+    </section>
+
+    <!-- Bottom nav -->
+    <nav class="tabbar" aria-label="Bottom Navigation">
+      <a class="tab active" href="#">
+        <div class="tab-ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1v-9.5Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span>Home</span>
+      </a>
+
+      <a class="tab selected" href="#">
+        <div class="tab-ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="5.5" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M12 1v3M12 20v3M1 12h3M20 12h3M4.2 4.2l2.2 2.2M17.6 17.6l2.2 2.2M19.8 4.2l-2.2 2.2M6.4 17.6l-2.2 2.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span>Weather</span>
+      </a>
+
+      <a class="tab" href="#">
+        <div class="tab-ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M12 21s-7-4.4-7-10.2A4.8 4.8 0 0 1 9.8 6c1.4 0 2.2.6 2.2.6S12.8 6 14.2 6A4.8 4.8 0 0 1 19 10.8C19 16.6 12 21 12 21Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span>Inhaler</span>
+      </a>
+
+      <a class="tab" href="#">
+        <div class="tab-ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <rect x="4" y="5" width="16" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M8 9h8M8 13h8M8 17h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span>Entries</span>
+      </a>
+    </nav>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

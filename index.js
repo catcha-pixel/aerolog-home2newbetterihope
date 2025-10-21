@@ -19,11 +19,11 @@ function applyAQITheme(aqiNum) {
 
 function setWeatherIcon(main) {
   const weatherIcon = document.getElementById("weatherIcon");
-  if (main === "Clear") weatherIcon.src = "images/sunny.png";
-  else if (main === "Clouds") weatherIcon.src = "images/cloudy.png";
-  else if (main === "Rain") weatherIcon.src = "images/rainy.png";
-  else if (main === "Snow") weatherIcon.src = "images/snowy.png";
-  else weatherIcon.src = "images/partial.png";
+  if (main === "Clear") weatherIcon.src = "sunny.png";
+  else if (main === "Clouds") weatherIcon.src = "cloudy.png";
+  else if (main === "Rain") weatherIcon.src = "rainy.png";
+  else if (main === "Snow") weatherIcon.src = "snowy.png";
+  else weatherIcon.src = "partial.png";
 }
 
 fetch(url)

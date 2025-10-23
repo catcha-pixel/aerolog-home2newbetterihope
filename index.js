@@ -48,3 +48,12 @@ fetch(url)
     document.getElementById("aqiNum").textContent = "--";
     document.getElementById("aqiQuality").textContent = "QUALITY: --";
   });
+
+const inhalerExpiration = "March 9, 2026";
+const lastEntryDate = "9/21/2025 @ 14:20";
+
+document.querySelector(".simple-card .warning").textContent = `Expiration: ${inhalerExpiration}`;
+document.querySelectorAll(".simple-card p.muted")[1].textContent = `Last entry: ${lastEntryDate}`;
+
+const userName = "[Name]";
+document.getElementById("userName").textContent = userName;

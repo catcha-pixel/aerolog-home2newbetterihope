@@ -12,7 +12,7 @@ body {
 .app {
   max-width: 430px;
   margin: 0 auto;
-  padding: 16px 16px 88px; /* space for bottom tabs */
+  padding: 16px 16px 88px;
 }
 
 /* Header */
@@ -35,14 +35,14 @@ body {
 /* Cards */
 .card {
   background: #fff; border-radius: 16px; padding: 18px;
-  margin-top: 12px; /* moved up a bit */
+  margin-top: 12px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.05);
 }
 
-/* AQI card look-alike */
+/* AQI card */
 .aqi-card {
   text-align: center;
-  color: #fff; /* all white text on the card */
+  color: #fff;
   border-radius: 18px;
   position: relative;
   overflow: hidden;
@@ -110,9 +110,10 @@ body {
 
 /* Simple cards with left icons */
 .title-row{
-  display: flex; align-items: center; gap: 10px; margin-bottom: 6px;
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 6px;
 }
-.leading-icon{ width: 28px; height: 28px; object-fit: contain; }
+.leading-icon{ width: 34px; height: 34px; object-fit: contain; }
 
 /* Meta text & buttons */
 .muted { color: #6b7280; margin: 6px 0; }
@@ -125,19 +126,70 @@ body {
 
 /* Bottom nav */
 .tabbar {
-  position: fixed; bottom: 0; left: 0; right: 0; background: #fff;
-  display: grid; grid-template-columns: repeat(4, 1fr);
-  border-top-left-radius: 16px; border-top-right-radius: 16px;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: #fff;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
   box-shadow: 0 -6px 20px rgba(0,0,0,0.1);
-  padding: 8px 0 10px; max-width: 430px; margin: 0 auto;
+  padding: 8px 0 10px;
+  max-width: 430px;
+  margin: 0 auto;
 }
-.tab { display: flex; flex-direction: column; align-items: center;
-  color: #6b7280; text-decoration: none; font-size: 13px; }
-.tab img { width: 22px; height: 22px; }
-.tab.active { color: #111827; }
+
+.tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #000;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.tab svg {
+  stroke: #000;
+}
+
+.tab.active span {
+  font-weight: 700;
+}
 
 /* Small screens */
 @media (max-width: 360px){
   .aqi-value{ font-size: 40px; }
   .weather-icon{ width: 76px; }
+}
+
+.simple-card {
+  padding-top: 12px;
+  padding-bottom: 14px;
+}
+.simple-card .title-row {
+  margin-bottom: 4px;
+}
+.simple-card p {
+  margin-top: 4px;
+  margin-bottom: 6px;
+}
+
+.inhaler-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.inhaler-actions .primary-btn {
+  flex: 1;
+}
+
+/* smaller + button */
+.small-btn {
+  width: 48px; /* smaller width */
+  flex: 0 0 auto;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
 }
